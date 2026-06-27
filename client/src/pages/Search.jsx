@@ -29,7 +29,7 @@ function MemeCard({ meme, onClick }) {
             onClick={() => onClick(meme)}
             className="cursor-pointer bg-zinc-900 border border-zinc-800 hover:border-red-600 transition-all">
             <img
-                src={`/api/memes/proxy?url=${encodeURIComponent(meme.image_url)}`}
+                src={`${import.meta.env.VITE_API_URL || '/api'}/memes/proxy?url=${encodeURIComponent(meme.image_url)}`}
                 alt={meme.name}
                 className="w-full h-48 object-cover opacity-90 hover:opacity-100" />
 

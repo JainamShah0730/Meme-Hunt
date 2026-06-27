@@ -27,7 +27,7 @@ export default function Editor() {
         }
         const img = new Image()
         img.crossOrigin = "anonymous"
-        img.src = `/api/memes/proxy?url=${encodeURIComponent(meme.image_url)}`
+        img.src = `${import.meta.env.VITE_API_URL || '/api'}/memes/proxy?url=${encodeURIComponent(meme.image_url)}`
         img.onload = () => {
             setBaseImg(img)
             // Adjust bottom text initial Y based on actual image ratio if we wanted to, 
