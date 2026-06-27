@@ -26,7 +26,7 @@ router.post('/search', async (req, res) => {
       ROUND((1 - (embedding <=> $1::vector))::numeric, 2) AS similarity
       FROM memes
       ORDER BY embedding <=> $1::vector
-      LIMIT 5
+      LIMIT 10
     `, [`[${vector.join(',')}]`])
 
         res.json(rows)
