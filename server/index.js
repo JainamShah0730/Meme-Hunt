@@ -6,7 +6,10 @@ import memesRouter from "./routes/memes.js"
 const app = express()
 const PORT = process.env.PORT || 3005
 
-app.use(cors({ origin: process.env.CLIENT_URL }))
+app.use(cors({
+    origin: ['http://localhost:5173',
+        'https://meme-matrix07.vercel.app']
+}))
 app.use(express.json())
 
 app.use('/api/memes', memesRouter)
