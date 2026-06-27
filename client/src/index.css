@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #09090b;
+    color: #f4f4f5;
+    font-family: monospace;
+}
+
+:root {
+    --red: #dc2626;
+    --red-glow: rgba(220, 38, 38, 0.5);
+    --surface-2: #09090b;
+    --border: #27272a;
+    --muted: #71717a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--surface-2);
+    color: #f4f4f5;
+
+}
